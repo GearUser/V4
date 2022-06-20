@@ -31,9 +31,9 @@ async def stats(e):
         LOGS.info(er)
         await e.answer("Someting Went Wrong 🤔\nResend Media", cache_time=0, alert=True)
        
-encode_channel_id = "-1001159872623, -1001159872623"
-filz_channel_id = -1001159872623
-status_channel_id = -1001611458683
+encode_channel_id = "-1001776231966"
+filz_channel_id = -1001776231966
+status_channel_id = -1001698039153
 filx_channel_id = -1001409342212
 async def encod(event):
     try:
@@ -99,19 +99,17 @@ async def encod(event):
         es = dt.now()
         kk = dl.split("/")[-1]       
         hh = kk
-        hh = hh.replace("[SubsPlease]", "")
+        hh = hh.replace("_", " ")
         vv = hh
-        vv = vv.replace("SubsPlease", "")
+        vv = vv.replace("Erai raws", "[ANIMEXT]")
         ss = vv
-        ss = ss.replace("_", " ")          
+        ss = ss.replace("Erai-raws", "ANIMEXT")          
         jj = ss
-        jj = jj.replace("(1080p)", "")
-        gg = jj
-        gg = jj.replace("1080p", "")
-        ii = gg
+        jj = jj.replace("720p", "720p x265")
+        ii = jj
         ii = ii.replace("Sly-Fox", "")
         mm = ii
-        mm = ' '.join(mm.split()[:-1])
+        mm = ' '.join(mm.split()[:-2])
         rr = f"encode"
         bb = f"{mm}.mkv"                       
         out = f"{rr}/{bb}"
@@ -156,10 +154,7 @@ async def encod(event):
                 ),
             )
         ds = await e.client.send_file(
-             filz_channel_id, file=ok, caption="**" + mm + "**" + "\n" + "`• 1080p x265 HEVC`" + "\n" + "`• Eng Sub`", force_document=True, thumb=thum
-        )
-        rs = await e.client.send_file(
-             filx_channel_id, file=ok, caption=mm + " (1080p x265 HEVC)" + " (" + "[ANIMEXT](https://t.me/Latest_Ongoing_Airing_Anime)" + ")", force_document=True, thumb=thum
+             filz_channel_id, file=ok, caption="**" + mm + "**" + "\n" + "`• 720p x265 HEVC 10 Bit`" + "\n" + "`• Eng Sub`", force_document=True, thumb=thum
         )
         await nnn.edit(mm + " Encoded Successfully✅",                   
                        buttons=[]
